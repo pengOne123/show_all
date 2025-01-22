@@ -59,6 +59,25 @@ function excel_push($excelnane,$fileurl,$td,$array,$colorarry){
 }
 
 /**
+ * 断点测试数据
+ **/
+
+function varDump($data='1')
+{
+
+    if (is_array($data)) {
+
+        echo "<pre>";
+        var_dump($data);
+
+    } else if(is_string($data)||is_numeric($data)) {
+        die("$data");
+    }
+
+    die("数据格式不支持查看此方法");
+}
+
+/**
  * 根据id进行目录分组
  **/
 function getUserHeadFilePath($head, $id)
